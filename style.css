@@ -1,4 +1,4 @@
-@import url(url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
 
 html, body {
     margin: 0;
@@ -18,32 +18,47 @@ body {
 @media all and (max-width: 799px) {
     .container {
         width: 100%;
+        margin: 0 auto;
     }
 }
 
 @media all and (min-width: 800px) and (max-width: 1279px) {
     .container {
         width: 1024px;
+        margin: 0 auto;
     }
 }
 
 @media all and (min-width: 1280px) {
     .container {
         width: 1280px;
+        margin: 0 auto;
     }
 }
 
 a {
     text-decoration: none;
-    color: orange;
-}
-
-a:hover {
     color: orangered;
 }
 
+a:hover {
+    color: orange;
+}
+
 h1,h2,h3,h4,h5 {
-    
+   line-height: 1.2em;
+}
+h1 {
+    border-bottom: 1px solid #ccc;
+    vertical-align: middle;
+    line-height: 2.0em;
+    margin-top: 0px;
+    padding-bottom: 10px;
+}
+
+hr {
+    border: 0px;
+    border-bottom: 1px solid #ccc;
 }
 
 .text-center  {
@@ -57,16 +72,11 @@ h1,h2,h3,h4,h5 {
 footer {
     text-align: center;
     color: #444;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-main {
-
+section {
+    
 }
 
-nav {
-
-}
-
-header {
-
-}
