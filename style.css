@@ -8,6 +8,7 @@ html, body {
 body {
     height: 100%;
     font-family: 'Open Sans';
+    padding: 0px 10px 0px 10px;
 }
 
 .container {
@@ -24,14 +25,14 @@ body {
 
 @media all and (min-width: 800px) and (max-width: 1279px) {
     .container {
-        width: 1024px;
+        width: 900px;
         margin: 0 auto;
     }
 }
 
 @media all and (min-width: 1280px) {
     .container {
-        width: 1280px;
+        width: 1024px;
         margin: 0 auto;
     }
 }
