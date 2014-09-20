@@ -38,18 +38,16 @@ body {
 
 a {
     text-decoration: none;
-    color: orangered;
+    color: #C44D58;
 }
 
 a:hover {
-    color: orange;
-    transition: transform 1.0s, font-size 0.5s;
-    transform: rotate(1080deg);
-    font-size: 48px;
+    color: #FF6B6B;
 }
 
 h1,h2,h3,h4,h5 {
    line-height: 1.2em;
+   color: #556270;
 }
 h1 {
     border-bottom: 1px solid #ccc;
@@ -78,6 +76,21 @@ footer {
     color: #444;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+ul {
+    list-style: none;
+}
+li {
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    margin-left: 0px;
+}
+li:before {
+    display: inline-block;
+    content: "> ";
+    position: relative;
+    left: -10px;
 }
 
 section {
