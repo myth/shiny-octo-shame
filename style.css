@@ -43,6 +43,9 @@ a {
 
 a:hover {
     color: orange;
+    transition: transform 1.0s, font-size 0.5s;
+    transform: rotate(1080deg);
+    font-size: 48px;
 }
 
 h1,h2,h3,h4,h5 {
@@ -54,6 +57,7 @@ h1 {
     line-height: 2.0em;
     margin-top: 0px;
     padding-bottom: 10px;
+    font-size: 32px;
 }
 
 hr {
