@@ -21,6 +21,11 @@ body {
         width: 100%;
         margin: 0 auto;
     }
+
+    .cell-50 {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
 
 @media all and (min-width: 800px) and (max-width: 1279px) {
@@ -28,12 +33,26 @@ body {
         width: 900px;
         margin: 0 auto;
     }
+
+    .cell-50 {
+        width: 50%;
+        float: left;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
 }
 
 @media all and (min-width: 1280px) {
     .container {
         width: 1024px;
         margin: 0 auto;
+    }
+
+    .cell-50 {
+        width: 50%;
+        float: left;
+        padding-right: 10px;
+        box-sizing: border-box;
     }
 }
 
