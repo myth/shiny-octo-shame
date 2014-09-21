@@ -113,7 +113,8 @@ li:before {
     left: -10px;
 }
 
-section {
-    
+.draft {
+    padding-top: 50px;
+    clear:both;
 }
 
