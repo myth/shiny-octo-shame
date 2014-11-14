@@ -30,8 +30,10 @@
         <span class="price">{{ car.price }}</span>
         
     </div>
-    <div class="col4">
-        <img src="{{ car.picture_url }}" alt="{{ car.brand }} {{ car.model }}" />
+    <div class="col4 text-right">
+        <img src="{{ car.picture_url }}" alt="{{ car.brand }} {{ car.model }}"
+             title="{{ car.brand }} {{ car.model }}" class="img-responsive"
+             width="270" height="180" />
     </div>
 </div>
 {% endfor %}

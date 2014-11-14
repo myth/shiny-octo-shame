@@ -22,20 +22,9 @@
     width: 100%;
     clear: both;
     overflow: auto;
+    box-sizing: border-box;
 }
 .row:before { clear: both; }
-
-.col1, .col2, .col3, .col4, .col5,
-.col6, .col7, .col8, .col9, .col10,
-.col11, .col12 {
-    display: block;
-    float: left;
-    box-sizing: border-box;
-
-    @media screen and (max-width: 800px) {
-        clear: both;
-    }
-}
 
 .col1 { width: 8.3333333%; }
 .col2 { width: 16.666667%; }
@@ -49,3 +38,17 @@
 .col10 { width: 83.33333%; }
 .col11 { width: 91.66667%; }
 .col12 { width: 100.0000%; }
+
+.col1, .col2, .col3, .col4, .col5,
+.col6, .col7, .col8, .col9, .col10,
+.col11, .col12 {
+    display: block;
+    float: left;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 799px) {
+        clear: both;
+        width: 100%;
+    }
+}
+
