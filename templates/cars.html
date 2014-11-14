@@ -19,14 +19,14 @@
 
 {% block content %}
 <div class="row row-space">
-    <div class="col12 padding">
+    <div class="col12">
         <h1>Available Cars</h1>
     </div>
 </div>
 {% for car in cars %}
 <div class="row row-space">
     <div class="col8">
-        <h3>{{ car.brand }} {{ car.model }}</h3>
+        <h3><a href="/car/{{ car.id }}">{{ car.brand }} {{ car.model }}</a></h3>
         <span class="price">{{ car.price }}</span>
         
     </div>
