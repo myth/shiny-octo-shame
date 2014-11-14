@@ -1,7 +1,11 @@
 /* Helpers be here yo */
 
 .text-center { text-align: center; }
-.text-right { text-align: right; }
+.text-right {
+    @media screen and (min-width: 800px) {
+        text-align: right;
+    }
+}
 .center { margin: 0 auto; }
 .right { float: right; }
 .left { float: left; }

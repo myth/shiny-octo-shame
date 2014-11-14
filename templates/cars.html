@@ -31,9 +31,11 @@
         
     </div>
     <div class="col4 text-right">
+        <a href="/car/{{ car.id }}">
         <img src="{{ car.picture_url }}" alt="{{ car.brand }} {{ car.model }}"
              title="{{ car.brand }} {{ car.model }}" class="img-responsive"
              width="270" height="180" />
+        </a>
     </div>
 </div>
 {% endfor %}
