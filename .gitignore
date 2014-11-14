@@ -186,3 +186,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# App Database File
+*.db
