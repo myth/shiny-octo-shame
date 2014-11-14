@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import os
+
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask import render_template
@@ -7,7 +9,7 @@ from flask import render_template
 from models import *
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'db.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///%s' % os.path.dirname(os.path.abspath(__file__))
 db = SQLAlchemy(app)
 app.config.from_pyfile('config.py')
 
