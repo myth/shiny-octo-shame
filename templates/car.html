@@ -2,11 +2,18 @@
 {% block title %}Index{% endblock %}
 
 {% block content %}
-<p>{{ car.brand }} {{ car.model }}</p>
-
-{% for rating in ratings %}
-    {{ rating.name }}
-    {{ rating.rating }}
-{% endfor %}
+<div class="row">
+    <div class="col8">
+        <h1>{{ car.brand }} {{ car.model }}</h1>
+        <p>The most epic car.</p>
+        <p><strong>Now only {{ car.price }},- kr per day!</strong></p>
+    </div>
+    <div class="col4">
+        {% for rating in ratings %}
+            {{ rating.name }}
+            {{ rating.rating }}
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
         
