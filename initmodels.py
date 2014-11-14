@@ -13,7 +13,7 @@ car_five = Car('Volkswagen', 'Polo Auto', 179.0)
 car_six = Car('Toyota', 'Yaris Auto', 189.0)
 car_seven = Car('Mercedes', 'C180', 389.0)
 car_eight = Car('Tesla', 'S', 459.0)
-car_nine = Car('BMW', 'M7 Touring', 399.0)
+car_nine = Car('BMW', 'M6', 399.0)
 
 db.session.add(car_one)
 db.session.add(car_two)
