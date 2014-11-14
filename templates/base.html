@@ -2,7 +2,8 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet/less" href="../static/less/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.0.0/less.min.js"></script>
     <title> {% block title %} {% endblock %}</title>
 </head>
 
@@ -17,6 +18,22 @@
 <main>
     {% block content %}
     <p>This be a section</p>
+    <div class="row">
+        <div class="col4">
+            penis
+        </div>
+        <div class="col8">
+            Skeet!
+        </div>
+    </div>
+    <div class="row">
+        <div class="col8">
+            penis
+        </div>
+        <div class="col4">
+            Skeet!
+        </div>
+    </div>
     {% endblock %}
 </main>
 
