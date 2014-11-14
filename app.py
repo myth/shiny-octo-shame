@@ -9,7 +9,6 @@ from flask import render_template
 from models import *
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.db' # % os.path.dirname(os.path.abspath(__file__))
 db = SQLAlchemy(app)
 app.config.from_pyfile('config.py')
 
