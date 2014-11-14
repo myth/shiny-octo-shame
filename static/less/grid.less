@@ -1,5 +1,22 @@
 /* Dat Grid Yo */
 
+.container {
+
+    margin: 0 auto;
+
+    @media screen and (min-width: 1280px) {
+        width: 1024px;
+    }
+
+    @media screen and (min-width: 800px) and (max-width: 1279px) {
+        width: 768px;
+    }
+
+    @media screen and (max-width: 799px) {
+        width: 100%;
+    }
+}
+
 .row {
     display: block;
     width: 100%;
@@ -15,7 +32,7 @@
     float: left;
     box-sizing: border-box;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 800px) {
         clear: both;
     }
 }
