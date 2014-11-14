@@ -38,5 +38,25 @@ footer{
 @import "grid.less";
 
 /* Elements */
+ul.navbar{
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  display: block;
+  list-style-type: none;
 
+  li{
+    float: left;
+
+
+    a{
+      padding: 15px;
+      display: inline-block;
+
+    }
+  }
+  li.active{
+    background: darken(@g445, 10%);
+  }
+}
 

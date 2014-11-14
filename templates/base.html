@@ -10,10 +10,19 @@
 <body>
 
 <nav>
-    <section class = "container padding">
+    <section class = "container">
     {% block navbar %}
-    <p>this is the navbar</p>
-
+        <ul class=" navbar">
+            <li class="active">
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/car/">Cars</a>
+            </li>
+            <li>
+                <a href="/about">About</a>
+            </li>
+        </ul>
     {% endblock %}
     </section>
 </nav>
