@@ -1,0 +1,12 @@
+nav{
+    text-align: center;
+}
+
+footer{
+    height: 100px;
+    width: 100%;
+    clear: both;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+}
