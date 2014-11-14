@@ -10,7 +10,7 @@ class Car(db.Model):
     picture_url = db.Column(db.String(250))
     ratings = db.relationship('Rating', backref='car', lazy='dynamic')
 
-    def __init__(self, brand, model, price, description=None, picture_url='static/img/default.jpg', available=True):
+    def __init__(self, brand, model, price, description=None, picture_url='/static/img/default.jpg', available=True):
         self.brand = brand
         self.model = model
         self.price = price

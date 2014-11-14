@@ -18,22 +18,27 @@ descriptions = {
 
     "c180": "The Mercedes-Benz C-Class is a line of compact executive cars produced by Daimler AG. Introduced in 1993 as a replacement for the 190 (W201) range, the C-Class was the smallest model in the marques lineup until the A-Class arrived in 1997.",
 
-    "s": "The Tesla Model S is a full-sized electric five-door, luxury liftback, produced by Tesla Motors. Since its introduction in June 2012 it has achieved rapidly growing sales, particularly in Norway and California. It scored a perfect 5.0 NHTSA safety rating. The US Environmental Protection Agency (EPA) official range for the Model S Performance model equipped with an 85 kWh battery pack is 265 miles (426 km), topping the Tesla Roadster to lead the electric car market. EPA rates its energy consumption at 237.5 Wh per kilometer (38 kWh/100 mi) for a combined fuel economy of 89 miles per gallon gasoline equivalent (2.64 L/100 km).",
+}
 
-    "m7": "BMW permitted Alpina to produce a high-performance version of its flagship 7-Series, however they did not want it to be a high-revving, BMW M version (which would have been known as a BMW M7 under the current nomenclature). It has also been suggested that there was no market for an M7 that would have featured the BMW M's trademark high-rev engine and twin-clutch automated manual transmission, and most customers who desired a performance option in the 7 Series would have gone for the V12-engined BMW 760Li.",
+images = {
+    "v40": '/static/img/volvo_v40.png',
+    "up": '/static/img/vw_up.png',
+    "ds3": '/static/img/citroen_ds3.png',
+    "500": '/static/img/fiat_500.png',
+    "polo": '/static/img/vw_polo_auto.png',
+    "yaris": '/static/img/toyota_yaris_auto.png',
+    "c180": '/static/img/mercedes_c180.png',
 }
 
 db.create_all()
 
-car_one = Car('Volvo', 'V40', 299.0, description=descriptions["v40"])
-car_two = Car('Volkswagen', 'Up', 199.0, description=descriptions["up"])
-car_three = Car('Citroen', 'DS3', 249.0, description=descriptions["ds3"])
-car_four = Car('Fiat', '500', 189.0, description=descriptions["500"])
-car_five = Car('Volkswagen', 'Polo Auto', 179.0, description=descriptions["polo"])
-car_six = Car('Toyota', 'Yaris Auto', 189.0, description=descriptions["yaris"])
-car_seven = Car('Mercedes', 'C180', 389.0, description=descriptions["c180"])
-car_eight = Car('Tesla', 'S', 459.0, description=descriptions["s"])
-car_nine = Car('BMW', 'M7 Touring', 399.0, description=descriptions["m7"])
+car_one = Car('Volvo', 'V40', 299.0, description=descriptions["v40"], picture_url=images['v40'])
+car_two = Car('Volkswagen', 'Up', 199.0, description=descriptions["up"], picture_url=images['up'])
+car_three = Car('Citroen', 'DS3', 249.0, description=descriptions["ds3"], picture_url=images['ds3'])
+car_four = Car('Fiat', '500', 189.0, description=descriptions["500"], picture_url=images['500'])
+car_five = Car('Volkswagen', 'Polo Auto', 179.0, description=descriptions["polo"], picture_url=images['polo'])
+car_six = Car('Toyota', 'Yaris Auto', 189.0, description=descriptions["yaris"], picture_url=images['yaris'])
+car_seven = Car('Mercedes', 'C180', 389.0, description=descriptions["c180"], picture_url=images['c180'])
 
 db.session.add(car_one)
 db.session.add(car_two)
@@ -42,8 +47,6 @@ db.session.add(car_four)
 db.session.add(car_five)
 db.session.add(car_six)
 db.session.add(car_seven)
-db.session.add(car_eight)
-db.session.add(car_nine)
 
 db.session.commit()
 
