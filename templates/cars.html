@@ -1,24 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Cars{% endblock %}
-{% block navbar %}
-<nav>
-    <ul class=" navbar">
-        <li>
-            <a href="/">Home</a>
-        </li>
-        <li class="active">
-            <a href="/car/">Cars</a>
-        </li>
-        <li>
-            <a href="/about">About</a>
-        </li>
-    </ul>
-</nav>
-{% endblock %}
-
-
 {% block content %}
-<div class="row row-space">
+<div class="row">
     <div class="col12">
         <h1>Available Cars</h1>
     </div>
@@ -27,8 +10,8 @@
 <div class="row row-space">
     <div class="col8">
         <h3><a href="/car/{{ car.id }}">{{ car.brand }} {{ car.model }}</a></h3>
-        <span class="price">{{ car.price }}</span>
-        
+        <p>Available for <strong>{{ car.price }}</strong>,- kr per day!</p>
+        <a href="#" class="button button-green">Rent now!</a>
     </div>
     <div class="col4 text-right">
         <a href="/car/{{ car.id }}">

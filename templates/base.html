@@ -6,63 +6,24 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.0.0/less.min.js"></script>
     <title> {% block title %} {% endblock %}</title>
 </head>
-
 <body>
-
-<nav>
-    <section class = "container">
-    {% block navbar %}
-        <ul class=" navbar">
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/car/">Cars</a>
-            </li>
-            <li>
-                <a href="/about">About</a>
-            </li>
-        </ul>
-    {% endblock %}
-    </section>
-</nav>
-
+{% include "navbar.html" %}
 <main>
-    <section class = "container padding">
-    {% block content %}
-    <div class="row row-space">
-        <div class="col4">
-            penis
-        </div>
-        <div class="col8">
-            Skeet!
-        </div>
-    </div>
-    <div class="row row-space">
-        <div class="col8">
-            penis
-        </div>
-        <div class="col4">
-            Skeet!
-        </div>
-    </div>
-    {% endblock %}
+    <section class="container padding">
+    {% block content %}{% endblock %}
     </section>
 </main>
-
-
 <footer>
     <section class = "container padding">
     {% block footer %}
       <p class="footer text-center">
-          | <a href="/faq">FAQ</a>
+          <a href="/faq">FAQ</a>
           | <a href="/contact">Contact</a>
           | <a href="/sitemap">Sitemap</a>
-          | <a href="/tos">Terms & Conditions</a> |
+          | <a href="/tos">Terms & Conditions</a>
       </p>
     {% endblock %}
     </section>
 </footer>
-
 </body>
 </html>

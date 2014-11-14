@@ -41,12 +41,24 @@ def tos():
 @app.route('/car/')
 @app.route('/car/<int:car_id>')
 def car(car_id=None):
-    if car_id:
-        car = Car.query.get(car_id)
-        ratings = Rating.query.filter_by(car_id=car_id).all()
-        return render_template('car.html', car=car, ratings=ratings)
 
     cars = Car.query.all()
+
+    if car_id:
+        car = Car.query.get(car_id)
+        if car_id == len(cars):
+            next_car = 1
+        else:
+            next_car = car_id + 1
+
+        if car_id == 1:
+            prev_car = len(cars)
+        else:
+            prev_car = car_id - 1
+
+        ratings = Rating.query.filter_by(car_id=car_id).all()
+        return render_template('car.html', car=car, ratings=ratings, prev_car=prev_car, next_car=next_car)
+
     return render_template('cars.html', cars=cars)
 
 @app.route('/rate', methods=['POST'])

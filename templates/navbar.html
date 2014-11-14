@@ -1,0 +1,19 @@
+<nav>
+    <div class="container">
+        <ul class="navbar">
+            <li {% if request.path == '/' %}class="active"{% endif %}>
+                <a href="/">Home</a>
+            </li>
+            <li {% if '/car' in request.path %}class="active"{% endif %}>
+                <a href="/car/">Cars</a>
+            </li>
+            <li {% if request.path == '/about' or
+                      request.path == '/faq' or 
+                      request.path == '/tos' or 
+                      request.path == '/contact' or 
+                      request.path == '/sitemap' %}class="active"{% endif %}>
+                <a href="/about">About</a>
+            </li>
+        </ul>
+    </div>
+</nav>

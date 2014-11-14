@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block title %}Index{% endblock %}
-
 {% block content %}
 <div class="row">
     <div class="col8">
@@ -14,6 +13,10 @@
             {{ rating.rating }}
         {% endfor %}
     </div>
+</div>
+<div class="row row-space">
+    <a href="/car/{{ next_car }}" class="right">Next car &raquo;</a>
+    <a href="/car/{{ prev_car }}">&laquo; Previous car</a>
 </div>
 {% endblock %}
         
