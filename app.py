@@ -43,7 +43,7 @@ def car(car_id=None):
         return render_template('car.html', car=car, ratings=ratings)
 
     cars = Car.query.all()
-    return render_template('templates/cars.html', cars=cars)
+    return render_template('cars.html', cars=cars)
 
 @app.route('/rate', methods=['POST'])
 def rate():
