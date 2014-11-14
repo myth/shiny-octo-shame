@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/style.css">
+    <title> {% block title %} {% endblock %}</title>
+</head>
+
+<body>
+
+<nav>
+    {% block navbar %}
+    <p>this is the navbar</p>
+    {% endblock %}
+</nav>
+
+<main>
+    {% block content %}
+    <p>This be a section</p>
+    {% endblock %}
+</main>
+
+
+<footer>
+    {% block footer %}
+    <p>This be footer</p>
+    {% endblock %}
+</footer>
+
+</body>
+</html>
