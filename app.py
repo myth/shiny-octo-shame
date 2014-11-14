@@ -3,7 +3,7 @@
 
 import os
 
-from flask import Flask, render_template, abort, request
+from flask import Flask, render_template, abort, request, jsonify
 from flask.ext.sqlalchemy import SQLAlchemy
 
 from models import *
@@ -53,15 +53,16 @@ def rate():
         abort(400)
 
     rating = Rating(
-        name = request.json['name'],
-        rating = request.json['rating'],
-        car_id = request.json['car_id']
+        request.json['name'],
+        request.json['car_id'],
+        request.json['rating']
     )
 
     db.session.add(rating)
     db.session.commit()
 
-    return jsonify(rating), 201
+    ratings = Rating.query.filter_by(car_id = request.json['car_id']).all()
+    return jsonify(reviews = [rating.serialize for rating in ratings]), 201
 
 
 if __name__ == '__main__':
