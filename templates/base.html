@@ -10,15 +10,18 @@
 <body>
 
 <nav>
+    <section class = "container padding">
     {% block navbar %}
     <p>this is the navbar</p>
+
     {% endblock %}
+    </section>
 </nav>
 
 <main>
+    <section class = "container padding">
     {% block content %}
-    <p>This be a section</p>
-    <div class="row">
+    <div class="row row-space">
         <div class="col4">
             penis
         </div>
@@ -26,7 +29,7 @@
             Skeet!
         </div>
     </div>
-    <div class="row">
+    <div class="row row-space">
         <div class="col8">
             penis
         </div>
@@ -35,13 +38,16 @@
         </div>
     </div>
     {% endblock %}
+    </section>
 </main>
 
 
 <footer>
+    <section class = "container padding">
     {% block footer %}
     <p>This be footer</p>
     {% endblock %}
+    </section>
 </footer>
 
 </body>
