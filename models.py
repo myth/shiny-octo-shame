@@ -28,6 +28,16 @@ class Rating(db.Model):
     def __init__(self, name, car, rating):
         self.name = name
         self.car_id = car
+        self.rating = rating
 
     def __repr__(self):
         return '<Rating %s: %d>' % (self.name, self.rating)
+
+    @property
+    def serialize(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'car_id': self.car_id,
+            'rating': self.rating
+        }
