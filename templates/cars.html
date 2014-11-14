@@ -1,7 +1,39 @@
 {% extends "base.html" %}
 {% block title %}Cars{% endblock %}
+{% block navbar %}
+<nav>
+    <ul class=" navbar">
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li class="active">
+            <a href="/car/">Cars</a>
+        </li>
+        <li>
+            <a href="/about">About</a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
 
 {% block content %}
-<p>There will be cars</p>
+<div class="row row-space">
+    <div class="col12 padding">
+        <h1>Available Cars</h1>
+    </div>
+</div>
+{% for car in cars %}
+<div class="row row-space">
+    <div class="col8">
+        <h3>{{ car.brand }} {{ car.model }}</h3>
+        <span class="price">{{ car.price }}</span>
+        
+    </div>
+    <div class="col4">
+        <img src="{{ car.image }}" alt="{{ car.brand }} {{ car.model }}" />
+    </div>
+</div>
+{% endfor %}
 {% endblock %}
 

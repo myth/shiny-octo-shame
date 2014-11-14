@@ -10,10 +10,19 @@
 <body>
 
 <nav>
-    <section class = "container padding">
+    <section class = "container">
     {% block navbar %}
-    <p>this is the navbar</p>
-
+        <ul class=" navbar">
+            <li class="active">
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/car/">Cars</a>
+            </li>
+            <li>
+                <a href="/about">About</a>
+            </li>
+        </ul>
     {% endblock %}
     </section>
 </nav>
@@ -45,7 +54,12 @@
 <footer>
     <section class = "container padding">
     {% block footer %}
-    <p>This be footer</p>
+      <p class="footer text-center">
+          | <a href="/faq">FAQ</a>
+          | <a href="/contact">Contact</a>
+          | <a href="/sitemap">Sitemap</a>
+          | <a href="/tos">Terms & Conditions</a>|
+      </p>
     {% endblock %}
     </section>
 </footer>

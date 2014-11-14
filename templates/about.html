@@ -1,5 +1,20 @@
 {% extends "base.html" %}
 {% block title %}About{% endblock %}
+{% block navbar %}
+<nav>
+    <ul class=" navbar">
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/car/">Cars</a>
+        </li>
+        <li class="active">
+            <a href="/about">About</a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
 
 {% block content %}
 <p>About us</p>
