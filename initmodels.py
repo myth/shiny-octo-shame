@@ -3,17 +3,42 @@
 from models import *
 from app import db
 
+descriptions = {
+    "v40": "The Volvo V40 is a small family car, available in five-door hatchback form, that was unveiled at the 2012 Geneva Motor Show. It has been on sale in Europe since May 2012 and the UK since August.",
+
+    "up": "The Volkswagen up! is a city car, part of the Volkswagen Group New Small Family (NSF) series of models, unveiled at the 2011 Frankfurt Motor Show (IAA). Production of the up! started in December 2011 at the Volkswagen Bratislava Plant in Bratislava, Slovakia.",
+
+    "ds3": "The Citroën DS3 is a supermini, produced by the French manufacturer Citroën since 2009 and officially launched in January 2010. This is the first car in the new DS (pronounced déesse, which is French for goddess) range from Citroën. It was first hinted by the concept car Citroën DS Inside. While DS branding explicitly recalls the classic Citroën DS, the DS3 bears no resemblance to the older car and shares none of its engineering quirks.",
+
+    "500": "The Fiat 500 (Italian: Cinquecento, Italian pronunciation: [ˌtʃiŋkweˈtʃɛnto]) is a city car produced by the Italian manufacturer Fiat between 1957 and 1975.",
+
+    "polo": "The Volkswagen Polo (pronounced [ˈfɔlksˌvaːgən ˈpoːloː]) is a supermini car produced by the German manufacturer Volkswagen since 1975. It is sold in Europe and other markets worldwide in hatchback, sedan, coupé and estate variants.",
+
+    "yaris": "The Toyota Yaris is a subcompact car produced by Toyota since 1999, replacing the Starlet. Between 1999 and 2005, some markets received the same vehicles under the Toyota Echo name. Toyota has used the Yaris and Echo names on the export version of several different Japanese-market models.",
+
+    "c180": "The Mercedes-Benz C-Class is a line of compact executive cars produced by Daimler AG. Introduced in 1993 as a replacement for the 190 (W201) range, the C-Class was the smallest model in the marques lineup until the A-Class arrived in 1997.",
+
+}
+
+images = {
+    "v40": '/static/img/volvo_v40.png',
+    "up": '/static/img/vw_up.png',
+    "ds3": '/static/img/citroen_ds3.png',
+    "500": '/static/img/fiat_500.png',
+    "polo": '/static/img/vw_polo_auto.png',
+    "yaris": '/static/img/toyota_yaris_auto.png',
+    "c180": '/static/img/mercedes_c180.png',
+}
+
 db.create_all()
 
-car_one = Car('Volvo', 'V40', 299.0)
-car_two = Car('Volkswagen', 'Up', 199.0)
-car_three = Car('Citroen', 'DS3', 249.0)
-car_four = Car('Fiat', '500', 189.0)
-car_five = Car('Volkswagen', 'Polo Auto', 179.0)
-car_six = Car('Toyota', 'Yaris Auto', 189.0)
-car_seven = Car('Mercedes', 'C180', 389.0)
-car_eight = Car('Tesla', 'S', 459.0)
-car_nine = Car('BMW', 'M6', 399.0)
+car_one = Car('Volvo', 'V40', 299.0, description=descriptions["v40"], picture_url=images['v40'])
+car_two = Car('Volkswagen', 'Up', 199.0, description=descriptions["up"], picture_url=images['up'])
+car_three = Car('Citroen', 'DS3', 249.0, description=descriptions["ds3"], picture_url=images['ds3'])
+car_four = Car('Fiat', '500', 189.0, description=descriptions["500"], picture_url=images['500'])
+car_five = Car('Volkswagen', 'Polo Auto', 179.0, description=descriptions["polo"], picture_url=images['polo'])
+car_six = Car('Toyota', 'Yaris Auto', 189.0, description=descriptions["yaris"], picture_url=images['yaris'])
+car_seven = Car('Mercedes', 'C180', 389.0, description=descriptions["c180"], picture_url=images['c180'])
 
 db.session.add(car_one)
 db.session.add(car_two)
@@ -22,8 +47,6 @@ db.session.add(car_four)
 db.session.add(car_five)
 db.session.add(car_six)
 db.session.add(car_seven)
-db.session.add(car_eight)
-db.session.add(car_nine)
 
 db.session.commit()
 

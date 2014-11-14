@@ -33,6 +33,10 @@ def contact():
 def sitemap():
     return render_template('site_map.html', dict=dict)
 
+@app.route('/tos')
+def tos():
+    return render_template('tos.html')
+
 
 @app.route('/car/')
 @app.route('/car/<int:car_id>')
