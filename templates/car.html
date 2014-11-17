@@ -55,13 +55,14 @@
     <div class="col4">
         <h3>Write a review</h3>
         <p>Give us your feedback on the {{ car.brand }} {{ car.model }}!</p>
-        <form action="" method="POST">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="Your name" class="form-input">
+        <form action="" method="POST" id="rate_form">
+            <label for="rate_name">Name</label>
+            <input type="text" name="name" id="rate_name" placeholder="Your name" class="form-input">
+            <input type="hidden" id="rate_car_id" name="car_id" value="{{ car.id }}" />
             <div class="row">
                 <div class="col8">
-                    <label for="rating">Rating</label>
-                    <select name="rating" id="rating">
+                    <label for="rate_rating">Rating</label>
+                    <select name="rating" id="rate_rating">
                         <option value="1">1 Star</option>
                         <option value="2">2 Stars</option>
                         <option value="3">3 Stars</option>
@@ -72,7 +73,7 @@
                 </div>
                 <div class="col4 text-right">
                     <label>&nbsp;</label>
-                    <button class="button button-green">Rate</button>
+                    <button class="button button-blue" type="submit" id="rate">Rate</button>
                 </div>
             </div>
         </form>
@@ -81,10 +82,13 @@
     <div class="col8">
         <h3>Customer reviews</h3>
         <p>This car has recieved <i>{{ num_ratings }}</i> reviews from our beloved customers.</p>
-        {% for rating in ratings %}
-            {{ rating.name }}
-            {{ rating.rating }}
-        {% endfor %}
+        <div class="ratings">
+            {% for rating in ratings %}
+            <div class="rating">
+                <p>{{ rating.name }} : {{ rating.rating }}</p>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
 <div class="row row-space">
