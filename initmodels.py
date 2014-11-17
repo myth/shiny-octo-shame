@@ -10,9 +10,9 @@ descriptions = {
 
     "ds3": "The Citroën DS3 is a supermini, produced by the French manufacturer Citroën since 2009 and officially launched in January 2010. This is the first car in the new DS (pronounced déesse, which is French for goddess) range from Citroën. It was first hinted by the concept car Citroën DS Inside. While DS branding explicitly recalls the classic Citroën DS, the DS3 bears no resemblance to the older car and shares none of its engineering quirks.",
 
-    "500": "The Fiat 500 (Italian: Cinquecento, Italian pronunciation: [ˌtʃiŋkweˈtʃɛnto]) is a city car produced by the Italian manufacturer Fiat between 1957 and 1975.",
+    "500": "The 500 is available with four different trim levels: Naked (not available in the United Kingdom or Italy; opting for this trim level means that the car does not have the seven airbags meaning that the passenger safety rating drops), Pop, Lounge, and Sport. Customers can also choose between 15 interior trims, nine wheel options, 19 decals, and 12 body colours. There are over 500,000 different personalized combinations of the 500 that can be made by adding all kinds of accessories, decals, interior and exterior colours, and trims.[8] The car is also available with the Blue&Me navigation system. The American Sport version has the 1.4 litre Multiair engine, which is manufactured in Michigan.",
 
-    "polo": "The Volkswagen Polo (pronounced [ˈfɔlksˌvaːgən ˈpoːloː]) is a supermini car produced by the German manufacturer Volkswagen since 1975. It is sold in Europe and other markets worldwide in hatchback, sedan, coupé and estate variants.",
+    "polo": "The Volkswagen Polo is a supermini car produced by the German manufacturer Volkswagen since 1975. It is sold in Europe and other markets worldwide in hatchback, sedan, coupé and estate variants.",
 
     "yaris": "The Toyota Yaris is a subcompact car produced by Toyota since 1999, replacing the Starlet. Between 1999 and 2005, some markets received the same vehicles under the Toyota Echo name. Toyota has used the Yaris and Echo names on the export version of several different Japanese-market models.",
 
