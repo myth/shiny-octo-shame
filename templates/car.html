@@ -56,15 +56,23 @@
         <form action="" method="POST">
             <label for="name">Name</label>
             <input type="text" name="name" id="name" placeholder="Your name" class="form-input">
-            <label for="rating">Rating</label>
-            <select name="rating" id="rating">
-                <option value="1">1 Star</option>
-                <option value="2">2 Stars</option>
-                <option value="3">3 Stars</option>
-                <option value="4">4 Stars</option>
-                <option value="5">5 Stars</option>
-                <option value="6" selected>6 Stars</option>
-            </select>
+            <div class="row">
+                <div class="col8">
+                    <label for="rating">Rating</label>
+                    <select name="rating" id="rating">
+                        <option value="1">1 Star</option>
+                        <option value="2">2 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="5">5 Stars</option>
+                        <option value="6" selected>6 Stars</option>
+                    </select>
+                </div>
+                <div class="col4 text-right">
+                    <label>&nbsp;</label>
+                    <button class="button button-green">Rate</button>
+                </div>
+            </div>
         </form>
         <p />
     </div>
@@ -78,6 +86,7 @@
     </div>
 </div>
 <div class="row row-space">
+    <p>&nbsp;</p>
     <a href="/car/{{ next_car }}" class="right">Next car &raquo;</a>
     <a href="/car/{{ prev_car }}">&laquo; Previous car</a>
 </div>
