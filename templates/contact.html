@@ -3,13 +3,29 @@
 {% block content %}
 <div class="row">
     <div class="col12">
-        <h1>Contact information</h1>
+        <h1>Contact form</h1>
     </div>
 </div>
 <div class="row">
     <div class="col12">
-        <p>Contact information</p>
+        <form action="" class="contact">
+            <label for="name">Name (required)</label>
+            <input type="text" name="name" class="form-input" id="name"required /><br>
+
+            <label for="email">Email (required)</label>
+            <input type="email" name="email" class="form-input" id="email"required /><br>
+
+            <label for="subject">Subject (optional)</label>
+            <input type="text" name="subject" class="form-input" id="subject"/><br>
+
+            <label for="message">Message (required)</label>
+            <textarea name="message" class="form-input" required id="message"></textarea><br>
+
+            <input class="submit center" type="submit" value="Send Message" />
+        </form>
+
     </div>
 </div>
 {% endblock %}
-        
+
+
