@@ -36,7 +36,7 @@ car_one = Car('Volvo', 'V40', 299.0, description=descriptions["v40"], picture_ur
 car_two = Car('Volkswagen', 'Up', 199.0, description=descriptions["up"], picture_url=images['up'])
 car_three = Car('Citroen', 'DS3', 249.0, description=descriptions["ds3"], picture_url=images['ds3'])
 car_four = Car('Fiat', '500', 189.0, description=descriptions["500"], picture_url=images['500'])
-car_five = Car('Volkswagen', 'Polo Auto', 179.0, description=descriptions["polo"], picture_url=images['polo'])
+car_five = Car('Volkswagen', 'Polo Auto', 179.0, description=descriptions["polo"], picture_url=images['polo'], available=False)
 car_six = Car('Toyota', 'Yaris Auto', 189.0, description=descriptions["yaris"], picture_url=images['yaris'])
 car_seven = Car('Mercedes', 'C180', 389.0, description=descriptions["c180"], picture_url=images['c180'])
 
