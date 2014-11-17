@@ -13,13 +13,9 @@
 
     <div class = "col3 left">
         <h2><a href="/car">Cars</a></h2>
-        <h4><a href="car/1">Volvo V40</a> </h4>
-        <h4><a href="car/2">Volkswagen Up</a></h4>
-        <h4><a href="car/3">Citroen DS3</a></h4>
-        <h4><a href="car/4">Fiat 500</a></h4>
-        <h4><a href="car/5">Volkswagen Polo Auto</a></h4>
-        <h4><a href="car/6">Toyota Yaris Auto</a></h4>
-        <h4><a href="car/7">Mercedes C180</a></h4>
+        {% for car in cars %}
+        <h4><a href="car/{{car.id}}">{{car.brand}} {{car.model}}</a></h4>
+        {% endfor %}
     </div>
 
     <div class = "col3 left">

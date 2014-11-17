@@ -12,7 +12,7 @@
         <p><strong>Now only {{ car.price }},- kr per day!</strong></p>
         <p>
         {% if car.available %}
-            <a href="#" id="rent_now" class="button button-green">Rent now!</a>
+            <a href="#" id="rent_now" class="button button-blue">Rent now!</a>
         {% else %}
             <a href="#" class="button button-red">Not available</a>
         {% endif %}
@@ -45,7 +45,8 @@
                 <option value="Trondheim">Trondheim</option>
                 <option value="Oslo">Oslo</option>
             </select>
-            <button class="button button-green right" id="rent_submit">Rent</button>
+
+            <button type="submit" class="button button-blue right" id="rent_submit">Rent</button>
             <p />
         </form>
     </div>

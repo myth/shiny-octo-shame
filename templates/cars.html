@@ -12,7 +12,7 @@
         <h3><a href="/car/{{ car.id }}">{{ car.brand }} {{ car.model }}</a></h3>
         <p>Available for <strong>{{ car.price }}</strong>,- kr per day!</p>
         {% if car.available %}
-        <a href="/car/{{ car.id }}" class="button button-green">Rent now!</a>
+        <a href="/car/{{ car.id }}" class="button button-blue">Rent now!</a>
         {% else %}
             <a href="#" class="button button-red">Not available</a>
         {% endif %}
