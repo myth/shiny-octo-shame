@@ -31,7 +31,8 @@ def contact():
 
 @app.route('/sitemap')
 def sitemap():
-    return render_template('site_map.html', dict=dict)
+    cars=Car.query.all()
+    return render_template('site_map.html', cars=cars)
 
 @app.route('/tos')
 def tos():

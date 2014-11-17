@@ -24,11 +24,11 @@ p {
 }
 
 a {
-    color: darken(blue, 30%);
+    color: @gray;
     text-decoration: none;
 }
 a:hover {
-    color: lighten(blue, 5%);
+    color: darken(@aoi, 5%);
 }
 
 nav {
@@ -122,6 +122,25 @@ select {
     background-image: -webkit-linear-gradient(top, lighten(red, 43%), lighten(red, 32%));
     background-image: -moz-linear-gradient(top, lighten(red, 43%), lighten(red, 32%));
     background-image: -ms-linear-gradient(top, lighten(red,  43%), lighten(red, 32%));
+}
+
+.button-blue{
+  border: 1px solid lighten(@aoi, 5%);
+  background-image: -webkit-linear-gradient(top, lighten(@aoi, 20%), darken(@aoi, 5%));
+  background-image: -moz-linear-gradient(top, lighten(@aoi, 20%), darken(@aoi, 5%));
+  background-image: -ms-linear-gradient(top, lighten(@aoi, 20%), darken(@aoi, 5%));
+
+  color: @gray;
+
+}
+
+.button-blue:hover{
+  color: darken(@flatbone, 10%);
+  background-image: -webkit-linear-gradient(top, darken(@pills, 10%), darken(@pills, 5%));
+  background-image: -moz-linear-gradient(top, darken(@pills, 10%), darken(@pills, 5%));
+  background-image: -ms-linear-gradient(top, darken(@pills, 10%), darken(@pills, 5%));
+
+
 }
 
 
