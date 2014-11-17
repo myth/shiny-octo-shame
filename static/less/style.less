@@ -15,7 +15,7 @@ html, body{
   font-size: 14px;
 }
 body{
-  background: @easy;
+  background: lighten(@gray, 30%);
 }
 
 p {
@@ -32,13 +32,19 @@ a:hover {
 }
 
 nav {
-  background: @g445;
+  background: @gray;
 }
 main{
   background: @flatbone;
 }
 footer{
-  background: @easy;
+  background: lighten(@gray, 30%);
+  a{
+    color: @flatbone;
+  }
+  a:hover{
+    color: black;
+  }
 
 }
 nav, main, body, section {
@@ -136,26 +142,28 @@ ul.navbar{
 
 
     a{
+      color: @flatbone;
       padding: 15px;
       display: inline-block;
 
     }
+    a:hover{
+      color: black;
+
+    }
   }
   li.active{
-    background: darken(@g445, 10%);
+    background: @pills;
   }
 
 }
-form.contact{
-  width:100%;
-  float:left;
+form.contact {
+  width: 100%;
+  float: left;
   overflow: auto;
-
-  button{
-    background: @g445;
-    border-color: @easy;
-  }
 }
+
+
 
 .hidden {
     display: none;
