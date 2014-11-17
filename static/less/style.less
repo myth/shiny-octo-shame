@@ -54,6 +54,31 @@ nav, main, body, section {
 @import "grid.less";
 
 /* Elements */
+
+.button {
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 3px;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+.button:focus { outline: none; }
+.button.active { outline: none; }
+
+.button-green {
+    border: 1px solid green;
+    background-image: -webkit-linear-gradient(top, lighten(green, 40%), lighten(green, 30%));
+    background-image: -moz-linear-gradient(top, lighten(green, 40%), lighten(green, 30%));
+    background-image: -ms-linear-gradient(top, lighten(green, 40%), lighten(green, 30%));
+
+    color: darken(green, 15%);
+}
+.button-green:hover {
+    color: darken(green, 10%);
+    background-image: -webkit-linear-gradient(top, lighten(green, 50%), lighten(green, 40%));
+    background-image: -moz-linear-gradient(top, lighten(green, 50%), lighten(green, 40%));
+    background-image: -ms-linear-gradient(top, lighten(green, 50%), lighten(green, 40%));
+}
+
 ul.navbar{
   margin: 0;
   padding: 0;
@@ -96,4 +121,3 @@ form.contact{
     border-color: @easy;
   }
 }
-
