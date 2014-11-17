@@ -50,6 +50,30 @@ footer{
 nav, main, body, section {
     box-sizing: border-box;
 }
+input,textarea,select {
+    font-size: 15px;
+    line-height: 15px;
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    padding: 5px;
+    border: 1px solid #aaa;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 4px #ccc;
+}
+input:focus {
+    outline: none;
+    border: 1px solid lighten(blue, 30%);
+    box-shadow: inset 0px 0px 4px lighten(cyan, 15%);
+}
+label { display: block; font-weight: 600; margin-bottom: 5px; }
+textarea {
+    resize: vertical;
+}
+select {
+    background-color: white;
+}
 
 /* Helpers */
 
@@ -128,20 +152,15 @@ ul.navbar{
   }
 
 }
-form.contact{
-  width:100%;
-  float:left;
+form.contact {
+  width: 100%;
+  float: left;
   overflow: auto;
-
-
-  .form-input{
-    width: 100%;
-    box-sizing: border-box;
-    resize: vertical;
-    font-size: 15px;
-    font-weight: 100;
-
-  }
-
-
 }
+
+
+
+.hidden {
+    display: none;
+}
+
