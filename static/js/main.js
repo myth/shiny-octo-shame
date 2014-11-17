@@ -5,9 +5,20 @@ var Cars = (function ($) {
     var submit = $('#rent_submit')
     var rate_btn = $('#rate')
     var rate_form = $('#rate_form')
+    var rate_list = $('#ratings')
+    var rate_number = $('#rate_amount')
 
     var update_ratings = function (data) {
-        console.log(data)
+        var html = ''
+        $(data.reviews).each(function (i) {
+            html += '<div class="rating">' +
+                    '<p class="text-right"><strong>' + data.reviews[i].name +
+                    '</strong></p>' + 
+                    '<div class="stars" style="width: ' + data.reviews[i].rating * 48 +
+                    'px;"></div></div>'
+        })
+        rate_list.html(html)
+        rate_number.text(data.reviews.length)
     }
 
     return {
@@ -41,10 +52,10 @@ var Cars = (function ($) {
                     dataType: 'json',
                     contentType: 'application/json',
                     data: JSON.stringify(json_d),
-                    done: function (data) {
+                    success: function (data) {
                         update_ratings(data)
                     },
-                    failure: function (xhr, thrownError, statusText) {
+                    error: function (xhr, thrownError, statusText) {
                         console.log(thrownError)
                     }
                 })

@@ -59,6 +59,7 @@ def car(car_id=None):
 
         ratings = Rating.query.filter_by(car_id=car_id).all()
         num_ratings = len(ratings)
+
         return render_template('car.html', car=car, ratings=ratings, num_ratings=num_ratings, prev_car=prev_car, next_car=next_car)
 
     return render_template('cars.html', cars=cars)

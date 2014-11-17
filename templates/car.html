@@ -52,7 +52,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col4">
+    <div class="col4 padding-right">
         <h3>Write a review</h3>
         <p>Give us your feedback on the {{ car.brand }} {{ car.model }}!</p>
         <form action="" method="POST" id="rate_form">
@@ -81,11 +81,12 @@
     </div>
     <div class="col8">
         <h3>Customer reviews</h3>
-        <p>This car has recieved <i>{{ num_ratings }}</i> reviews from our beloved customers.</p>
-        <div class="ratings">
+        <p>This car has recieved <i id="rate_amount">{{ num_ratings }}</i> reviews from our beloved customers.</p>
+        <div class="ratings" id="ratings">
             {% for rating in ratings %}
             <div class="rating">
-                <p>{{ rating.name }} : {{ rating.rating }}</p>
+                <p class="text-right"><strong>{{ rating.name }}</strong></p>
+                <div class="stars" style="width: {{ rating.rating * 48 }}px;"></div>
             </div>
             {% endfor %}
         </div>
