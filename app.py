@@ -57,7 +57,8 @@ def car(car_id=None):
             prev_car = car_id - 1
 
         ratings = Rating.query.filter_by(car_id=car_id).all()
-        return render_template('car.html', car=car, ratings=ratings, prev_car=prev_car, next_car=next_car)
+        num_ratings = len(ratings)
+        return render_template('car.html', car=car, ratings=ratings, num_ratings=num_ratings, prev_car=prev_car, next_car=next_car)
 
     return render_template('cars.html', cars=cars)
 

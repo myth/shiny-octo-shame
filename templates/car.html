@@ -2,12 +2,51 @@
 {% block title %}Index{% endblock %}
 {% block content %}
 <div class="row">
-    <div class="col8">
+    <div class="col-12">
         <h1>{{ car.brand }} {{ car.model }}</h1>
-        <p>The most epic car.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col4">
         <p><strong>Now only {{ car.price }},- kr per day!</strong></p>
+        <p>
+        {% if car.available %}
+            <a href="#" class="button button-green">Rent now!</a>
+        {% else %}
+            <a href="#" class="button button-red">Not available</a>
+        {% endif %}
+        </p>
     </div>
     <div class="col4">
+        <p>{{ car.description }}</p>
+    </div>
+    <div class="col4 text-right">
+        <img src="{{ car.picture_url }}" alt="{{ car.brand }} {{ car.model }}"
+             title="{{ car.brand }} {{ car.model }}" class="img-responsive" />
+    </div>
+</div>
+<div class="row">
+    <div class="col4">
+        <h3>Write a review</h3>
+        <p>Give us your feedback on the {{ car.brand }} {{ car.model }}!</p>
+        <form action="" method="POST">
+            <label for="name">Name</label><br />
+            <input type="text" name="name" id="name" class="form-input"><br /><br />
+            <label for="rating">Rating</label><br />
+            <select name="rating" id="rating">
+                <option value="1">1 Star</option>
+                <option value="2">2 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars</option>
+                <option value="6" selected>6 Stars</option>
+            </select>
+        </form>
+        <p />
+    </div>
+    <div class="col8">
+        <h3>Customer reviews</h3>
+        <p>This car has recieved <i>{{ num_ratings }}</i> reviews from our beloved customers.</p>
         {% for rating in ratings %}
             {{ rating.name }}
             {{ rating.rating }}
