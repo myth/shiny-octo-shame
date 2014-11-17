@@ -77,21 +77,23 @@ ul.navbar{
 
 }
 form.contact{
-  width:90%;
+  width:100%;
   float:left;
+  overflow: auto;
 
-  input, textarea{
-    width:90%;
+
+  .form-input{
+    width: 100%;
+    box-sizing: border-box;
     resize: vertical;
-    font-size: 12px;
-  }
-
-  input.submit{
-    color: @morning;
-    width: 25%;
+    font-size: 20px;
+    font-weight: 100;
 
   }
 
-
-
+  button{
+    background: @g445;
+    border-color: @easy;
+  }
 }
+

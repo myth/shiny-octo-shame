@@ -7,8 +7,8 @@
     </div>
 </div>
 <div class="row">
-    <div class="col12">
-        <form action="" class="contact">
+    <div class="col9">
+        <form class="contact">
             <label for="name">Name (required)</label>
             <input type="text" name="name" class="form-input" id="name"required /><br>
 
@@ -19,12 +19,15 @@
             <input type="text" name="subject" class="form-input" id="subject"/><br>
 
             <label for="message">Message (required)</label>
-            <textarea name="message" class="form-input" required id="message"></textarea><br>
+            <textarea name="message" class="form-input" required id="message" rows="20"></textarea><br>
+            <p class="text-center">
+                <button class="center" type="submit"> Send Message</button>
+            </p>
 
-            <input class="submit center" type="submit" value="Send Message" />
         </form>
 
     </div>
+    <div class="col3 padding-horizontal">There will be some helptext here</div>
 </div>
 {% endblock %}
 
