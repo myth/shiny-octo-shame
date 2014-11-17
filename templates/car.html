@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Index{% endblock %}
 {% block content %}
+{% if car %}
 <div class="row">
     <div class="col-12">
         <h1>{{ car.brand }} {{ car.model }}</h1>
@@ -90,5 +91,12 @@
     <a href="/car/{{ next_car }}" class="right">Next car &raquo;</a>
     <a href="/car/{{ prev_car }}">&laquo; Previous car</a>
 </div>
+{% else %}
+    <div class="row">
+        <div class="col12">
+            <h1>No such car.</h1>
+        </div>
+    </div>
+{% endif %}
 {% endblock %}
         

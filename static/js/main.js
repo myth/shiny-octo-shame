@@ -22,6 +22,9 @@ var Cars = (function ($) {
                     alert('There were errors in the form!')
                 }
             })
+            if (location.hash === '#rent_now') {
+                $(form).show()
+            }
         },
         validateForm: function () {
             return true;
