@@ -114,7 +114,7 @@ var Cars = (function ($) {
                     }
                 })
             })
-            $(contact_submit).on('click', function (e) {
+            $('#contact_submit').on('click', function (e) {
                 var contactForm = $('#contact_form')
                 var fields = contactForm.serializeArray()
                 for (var x = 0; x < fields.length; x++) {
