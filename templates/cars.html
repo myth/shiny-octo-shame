@@ -6,7 +6,29 @@
         <h1>Available Cars</h1>
     </div>
 </div>
-{% for car in cars %}
+
+{% if request.args.order == "brand" %}
+    {% set sort_on = "brand" %}
+    {% set reverse = 0 %}
+{% elif request.args.order == "-brand"%}
+    {% set sort_on = "brand" %}
+    {% set reverse = 1 %}
+{% elif request.args.order == "price"%}
+    {% set sort_on = "price" %}
+    {% set reverse = 0 %}
+{% elif request.args.order == "-price"%}
+    {% set sort_on = "price" %}
+    {% set reverse = 1 %}
+{% else %}
+    {% set sort_on = "brand" %}
+    {% set reverse = 0 %}
+{% endif %}
+
+<p>Sort: <a href="/car/?order=brand">By name</a> | 
+         <a href="/car/?order=-price">By highest price</a> |
+         <a href="/car/?order=price">By lowest price</a> 
+
+{% for car in cars|sort(attribute=sort_on, reverse=reverse) %}
 <div class="row row-space">
     <div class="col8">
         <h3><a href="/car/{{ car.id }}">{{ car.brand }} {{ car.model }}</a></h3>
