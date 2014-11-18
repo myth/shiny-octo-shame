@@ -3,8 +3,13 @@
 
 import os
 
-from flask import Flask, render_template, abort, request, jsonify
+from flask import Flask, render_template, abort, request, jsonify, Response
 from flask.ext.sqlalchemy import SQLAlchemy
+
+from xml.etree.ElementTree import Element, SubElement, tostring
+import xml.etree.ElementTree as ET
+
+
 
 from models import *
 
@@ -82,6 +87,57 @@ def rate():
 
     ratings = Rating.query.filter_by(car_id = request.json['car_id']).all()
     return jsonify(reviews = [rating.serialize for rating in ratings]), 201
+
+@app.route('/car/xml/')
+def car_xml():
+    cars = Car.query.all()
+
+    xml = Element('cars')
+
+    for car in cars:
+        carElement = SubElement(xml, 'car')
+
+        id = SubElement(carElement, 'id')
+        id.text = str(car.id)
+
+        brand = SubElement(carElement, 'brand')
+        brand.text = car.brand
+
+        model = SubElement(carElement, 'model')
+        model.text = car.model
+
+        price = SubElement(carElement, 'price')
+        price.text = str(car.price)
+
+        description = SubElement(carElement, 'description')
+        description.text = car.description
+
+        available = SubElement(carElement, 'available')
+        available.text = str(car.available)
+
+        picture_url = SubElement(carElement, 'picture_url')
+        picture_url.text = car.picture_url
+
+        ratings = Rating.query.filter_by(car_id=car.id).all()
+        ratingsElement = SubElement(carElement, 'ratings')
+
+        for rating in ratings:
+            ratingElement = SubElement(ratingsElement, 'rating')
+
+            id = SubElement(ratingElement, 'id')
+            id.text = str(rating.id)
+
+            name = SubElement(ratingElement, 'name')
+            name.text = rating.name
+
+            rate = SubElement(ratingElement, 'rate')
+            rate = str(rating.rating)
+
+
+    return Response(tostring(xml), mimetype='text/xml')
+
+
+
 
 
 if __name__ == '__main__':
