@@ -136,6 +136,11 @@ def car_xml():
 
     return Response(tostring(xml), mimetype='text/xml')
 
+@app.route('/references')
+def references():
+    cars=Car.query.all()
+    return render_template('references.html', cars=cars)
+
 
 
 
