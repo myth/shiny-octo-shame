@@ -131,7 +131,7 @@ def car_xml():
             name.text = rating.name
 
             rate = SubElement(ratingElement, 'rate')
-            rate = str(rating.rating)
+            rate.text = str(rating.rating)
 
 
     return Response(tostring(xml), mimetype='text/xml')
