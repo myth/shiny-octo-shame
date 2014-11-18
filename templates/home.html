@@ -6,21 +6,38 @@
 </div>
 <div class="row row-space ">
     <section class="col9">
-        <p>Soon to be available!</p>
-        <img src="/static/img/bugatti.jpg" alt="Very fast car">
-        <p>The Bugatti Veyron EB 16.4 is a mid-engined supercar, designed and developed by the Volkswagen Group and manufactured in Molsheim, France, by Bugatti Automobiles S.A.S.</p>
+        <img src="/static/img/bugatti.jpg" class="img-responsive left margin-right" width="256" alt="Very fast car">
+        <div>
+            <h4 class="clear-top-margin">Soon available!</h4>
+            <p>The Bugatti Veyron EB 16.4 is a mid-engined supercar, designed and developed by the Volkswagen Group and manufactured in Molsheim, France, by Bugatti Automobiles S.A.S.</p>
+        </div>
+        <p>We will during a campaign period offer the Bugatti Veyron to the extemely low price of <b>599.0,- kr</b> per day! No other car rental firm can compete with this most glorious
+        offer! For more information on the Bugatti Veyron rental opportunities, and pre-reservation. Please contact us using the <a href="/contact"><b>contact form</b></a> and tell us
+        why you should be one of the first people to rent the Bugatty Veyron!</p>
+        <p>Runners up will recieve a discount coupon valid on the following gas stations, when filling gasoline for your rental cars from Shiny Octo-Shame:
+        <i>Statoil</i>,
+        <i>Shell</i>,
+        <i>Esso</i>,
+        <i>YX</i></p>
     </section>
     <section class="col3 padding-horizontal">
-        <h3>Our focus</h3>
-        <p>We aim to provide the best car rental service in the entire region.
-        If you choose us, will do our best to provide you with the best possible experience.</p>
-        <p>We match our competitors price for all car models we offer! Additionally, you can return the car either to our vendor outlets, or at any airport or transportation centre where we have an office location.</p>
+        <div class="panel">
+            <h3 class="clear-top-margin">Our focus</h3>
+            <p>We aim to provide the best car rental service in the entire region.
+            If you choose us, will do our best to provide you with the best possible experience.</p>
+            <p>We match our competitors price for all car models we offer! Additionally, you can return the car either to our vendor outlets, or at any airport or transportation centre where we have an office location.</p>
+        </div>
     </section>
 
 </div>
 <div class="row">
+    <div class="col12">
+        <h3>Most popular cars</h3>
+    </div>
+</div>
+<div class="row">
     {% for u in ultralist %}
-    <section class="col4 padding">
+    <section class="col4">
         <h3><a href="/car/{{ u.car.id }}">{{ u.car.brand }} {{ u.car.model }} </a> </h3>
         <div class="boxwrapper">
             <div class="box"><div class="badge">{{ u.rating }} / 6</div></div>
@@ -29,16 +46,11 @@
                      title="{{ u.car.brand }} {{ u.car.model }}" class="img-responsive"
                      width="270" height="180" />
             </a>
-
-
-
         </div>
-
-
     </section>
-
+    {% endfor %}
 </div>
-{% endfor %}
+<p class="padding-vertical">&nbsp;</p>
 {% endblock %}
 
 
