@@ -4,13 +4,13 @@
 <div class="row">
     <h1>Shiny Octo-Shame Car Rental</h1>
 </div>
-<div class="row row-space">
+<div class="row row-space ">
     <section class="col9">
         <p>Soon to be available!</p>
         <img src="/static/img/bugatti.jpg" alt="Very fast car">
         <p>The Bugatti Veyron EB 16.4 is a mid-engined supercar, designed and developed by the Volkswagen Group and manufactured in Molsheim, France, by Bugatti Automobiles S.A.S.</p>
     </section>
-    <section class="col3">
+    <section class="col3 padding-horizontal">
         <h3>Our focus</h3>
         <p>We aim to provide the best god damn car rental service in the entire region.
         If you choose us, we will make you cum in your buttpussy.</p>
@@ -19,6 +19,29 @@
         <p>All we know is, you can rent cars from us increadibly cheap, and they're
         awesome as well!</p>
     </section>
+
 </div>
+<div class="row">
+    {% for u in ultralist %}
+    <section class="col4 padding">
+        <h3><a href="/car/{{ u.car.id }}">{{ u.car.brand }} {{ u.car.model }} </a> </h3>
+        <div class="boxwrapper">
+            <div class="box"><div class="badge">{{ u.rating }} / 6</div></div>
+            <a href="/car/{{ u.car.id }}">
+                <img src="{{ u.car.picture_url }}" alt="{{ u.car.brand }} {{ u.car.model }}"
+                     title="{{ u.car.brand }} {{ u.car.model }}" class="img-responsive"
+                     width="270" height="180" />
+            </a>
+
+
+
+        </div>
+
+
+    </section>
+
+</div>
+{% endfor %}
 {% endblock %}
-        
+
+
