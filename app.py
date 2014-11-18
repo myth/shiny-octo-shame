@@ -30,7 +30,7 @@ def index():
         for score in car.ratings:
             score.rating
             total = score.rating + total
-        alltotal[car] = float(total) / float(len(car.ratings.all()))
+        alltotal[car] = str(float(total) / float(len(car.ratings.all())))[:3]
 
     cars = sorted(alltotal, key=alltotal.get, reverse=True)
     cars = cars[:3]
@@ -38,7 +38,7 @@ def index():
     ultralist = []
 
     for c in cars:
-        ultralist.append({'car': c, 'rating': '%f'[:2] % alltotal[c]})
+        ultralist.append({'car': c, 'rating': alltotal[c]})
 
     return render_template('home.html', ultralist=ultralist)
 
