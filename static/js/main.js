@@ -21,6 +21,26 @@ var Cars = (function ($) {
         rate_number.text(data.reviews.length)
     }
 
+    var testAlpha = function (data) {
+        if (!data) return false
+        if (/^[a-zA-ZæøåÆØÅ\w]+$/.test(data)) return true
+        return false
+    }
+    var testAlphaNum = function (data) {
+        if (!data) return false
+        if (/^[a-zA-Z0-9æøåÆØÅ\w]+/.test(data)) return true
+        return false
+    }
+    var testEmail = function (data) {
+        if (/[a-zA-Z\w.]+@[a-zA-Z\w..]+/.test(data)) return true
+        return false
+    }
+    var testPhone = function (data) {
+        if (!data) return false
+        if (/[0-9]+/.test(data)) return true
+        return false
+    }
+
     var validateRentForm = function () {
         var fname = $('#first_name')
         var lname = $('#last_name')
@@ -37,26 +57,6 @@ var Cars = (function ($) {
 
         var errors = []
         
-        var testAlpha = function (data) {
-            if (!data) return false
-            if (/^[a-zA-ZæøåÆØÅ\w]+$/.test(data)) return true
-            return false
-        }
-        var testAlphaNum = function (data) {
-            if (!data) return false
-            if (/^[a-zA-Z0-9æøåÆØÅ\w]+/.test(data)) return true
-            return false
-        }
-        var testEmail = function (data) {
-            if (/[a-zA-Z\w.]+@[a-zA-Z\w..]+/.test(data)) return true
-            return false
-        }
-        var testPhone = function (data) {
-            if (!data) return false
-            if (/[0-9]+/.test(data)) return true
-            return false
-        }
-
         if (!testAlpha(fname.val())) errors.push('#first_name')
         if (!testAlpha(lname.val())) errors.push('#last_name')
         if (!testEmail(email.val())) errors.push('#email')
@@ -113,6 +113,17 @@ var Cars = (function ($) {
                         console.log(thrownError)
                     }
                 })
+            })
+            $(contact_submit).on('click', function (e) {
+                var contactForm = $('#contact_form')
+                var fields = contactForm.serializeArray()
+                for (var x = 0; x < fields.length; x++) {
+                    if (!fields[x]['value']) {
+                        alert('Missing input in fields')
+                        return
+                    }
+                }
+                alert('Thank you for your inquiry. We will get in touch shortly.')
             })
             if (location.hash === '#rent_now') {
                 $(form).show()
