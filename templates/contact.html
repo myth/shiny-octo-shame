@@ -8,26 +8,31 @@
 </div>
 <div class="row">
     <div class="col9">
-        <form class="contact">
+        <form class="contact" id="contact_form">
             <label for="name">Name (required)</label>
-            <input type="text" name="name" class="form-input" id="name"required /><br>
+            <input type="text" name="name" class="form-input" id="contact_name"required />
 
             <label for="email">Email (required)</label>
-            <input type="email" name="email" class="form-input" id="email"required /><br>
+            <input type="email" name="email" class="form-input" id="contact_email"required />
 
             <label for="subject">Subject (optional)</label>
-            <input type="text" name="subject" class="form-input" id="subject"/><br>
+            <input type="text" name="subject" class="form-input" id="contact_subject"/>
 
             <label for="message">Message (required)</label>
-            <textarea name="message" class="form-input" required id="message" rows="20"></textarea><br>
-            <p class="text-center">
-                <button class="center button-blue button" type="submit"> Send Message</button>
+            <textarea name="message" class="form-input" required id="contact_message" rows="20"></textarea>
+            <p>
+                <button class="center button-blue button right" type="submit" id="contact_submit"> Send Message</button>
             </p>
 
         </form>
 
     </div>
-    <div class="col3 padding-horizontal">There will be some helptext here</div>
+    <div class="col3 padding-horizontal">
+        <label>Information</label>
+        <p>Please be as precise as possible in your contact message. This will allow us to reply to your inquiry as soon and efficiently as possible.</p>
+        <p>If you have been in an accident while driving your rental car, please fill out the accident report form located in the glove box, and call
+        our accident response team at +47 814 05 666.</p>
+    </div>
 </div>
 {% endblock %}
 

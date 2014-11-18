@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}References{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col12">
+        <h1>References</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <p>All information about the cars is from Wikipedia.</p>
+        <p> All pictures from Europcar has been approved for use in this project by Erlend Jordet in Europcar Norway.</p>
+        {% for car in cars %}
+            <img src="{{ car.picture_url }}" alt="{{ car.brand }} {{ car.model }}">
+            <p>Name: {{ car.brand }} {{ car.model }} </p>
+            <p>Owner: Europcar</p>
+            <p>Original URL: http://www.europcar.com/EBE/module/render/Fleet-Default</p>
+        {% endfor %}
+
+
+        <img src="static/img/bugatti.jpg" alt="Bugatti Veyron">
+        <p>Name: Bugatti Veyron</p>
+        <p>Owner: carzmain.com</p>
+        <p>Original URL: http://carzmain.com/reviews/bugatti-veyron.html</p>
+
+        <img src="static/img/star.png" alt="Astar">
+        <p>Name: Yellow star</p>
+        <p>Owner: Google icons</p>
+        <p>Source: Google image search</p>
+    </div>
+</div>
+{% endblock %}
