@@ -161,8 +161,8 @@ def references():
     cars=Car.query.all()
     return render_template('references.html', cars=cars)
 
-@app.route('/404')
-def r404():
+@app.route('/linkdead')
+def linkdead():
     return render_template('404.html')
 
 
