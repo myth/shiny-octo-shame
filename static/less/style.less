@@ -186,14 +186,6 @@ form.contact {
     box-shadow: inset 0px 0px 5px rgba(255,0,0,0.4);
 }
 
-/* Grid */
-
-@import "grid.less";
-
-.hidden {
-    display: none;
-}
-
 .ratings {
     .rating {
         display: block;
@@ -211,7 +203,6 @@ form.contact {
         }
     }
 }
-
 
 .box{
   width: 75px;
@@ -236,6 +227,20 @@ form.contact {
 
 .boxwrapper{
   position: relative;
+}
+
+.panel {
+    background-color: darken(@flatbone, 10%);
+    padding: 15px 15px 1px 15px;
+    box-sizing: border-box;
+}
+
+/* Grid */
+
+@import "grid.less";
+
+.hidden {
+    display: none;
 }
 
 
