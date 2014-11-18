@@ -19,12 +19,19 @@ While in enviroment:
 
     pip install -r req.txt
 
+### Run
+From within the virtualenv:
+
+    python app.py
 
 ## Technology
 
 ### Form Controls
 
-### CSS
+### CSS/LESS
+
+We use LESS as our style language. LESS is an extended version off CSS which provides great dynamic features like variables and functions. LESS is transpiled down to ordinary CSS. We choose LESS because it it improves our development speed and provides a little extended, but familiar syntax. Most of our style code is CSS2 compliant, but some small things like gradient are CSS3 only.
+
 
 ### XML
 
