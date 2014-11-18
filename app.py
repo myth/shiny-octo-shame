@@ -17,6 +17,9 @@ app = Flask(__name__)
 db = SQLAlchemy(app)
 app.config.from_pyfile('config.py')
 
+@app.errorhandler(404)
+def page_not_found(e):
+        return render_template('404.html'), 404
 
 @app.route('/')
 def index():
