@@ -17,14 +17,9 @@ app = Flask(__name__)
 db = SQLAlchemy(app)
 app.config.from_pyfile('config.py')
 
-@app.errorhandler(404)
-def page_not_found(e):
-    return render_template('404.html'), 404
-
-@app.route('/404')
-def r404():
-    return render_template('404.html')
-
+#@app.errorhandler(404)
+#def page_not_found(e):
+#    return render_template('404.html'), 404
 
 @app.route('/')
 def index():
@@ -166,9 +161,14 @@ def references():
     cars=Car.query.all()
     return render_template('references.html', cars=cars)
 
+@app.route('/404')
+def r404():
+    return render_template('404.html')
+
+
 
 
 
 if __name__ == '__main__':
-    app.debug = True
+    app.debug = False
     app.run()
