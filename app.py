@@ -20,7 +20,24 @@ app.config.from_pyfile('config.py')
 
 @app.route('/')
 def index():
-    return render_template('home.html')
+    cars=Car.query.all()
+    alltotal = {}
+    for car in cars:
+        total = 0
+        for score in car.ratings:
+            score.rating
+            total = score.rating + total
+        alltotal[car] = total/len(car.ratings.all())
+
+    cars = sorted(alltotal, key=alltotal.get, reverse=True)
+    cars = cars[:3]
+
+    ultralist = []
+
+    for c in cars:
+        ultralist.append({'car': c, 'rating': '%.1f' % alltotal[c]})
+
+    return render_template('home.html', ultralist=ultralist)
 
 @app.route('/about')
 def about():
