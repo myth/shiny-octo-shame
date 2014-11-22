@@ -29,7 +29,7 @@
 <div class="row hidden" id="rent_form">
     <div class="col12">
         <h3>Rent this car now</h3>
-        <form action="" method="POST">
+        <form action="/car/{{ car.id }}" method="POST">
             <label for="first_name">First name</label>
             <input type="text" name="first_name" id="first_name" placeholder="Name" required />
             <label for="last_name">Last name</label>
@@ -47,7 +47,7 @@
             </select>
 
             <button type="submit" class="button button-blue right" id="rent_submit">Rent</button>
-            <p />
+            <br /><br />
         </form>
     </div>
 </div>
@@ -55,7 +55,7 @@
     <div class="col4 padding-right">
         <h3>Write a review</h3>
         <p>Give us your feedback on the {{ car.brand }} {{ car.model }}!</p>
-        <form action="" method="POST" id="rate_form">
+        <form action="/car/{{ car.id }}" method="POST" id="rate_form">
             <label for="rate_name">Name</label>
             <input type="text" name="name" id="rate_name" placeholder="Your name" class="form-input">
             <input type="hidden" id="rate_car_id" name="car_id" value="{{ car.id }}" />
@@ -77,7 +77,7 @@
                 </div>
             </div>
         </form>
-        <p />
+        <br /><br />
     </div>
     <div class="col8">
         <h3>Customer reviews</h3>
