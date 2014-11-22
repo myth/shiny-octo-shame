@@ -57,7 +57,7 @@
         <p>Give us your feedback on the {{ car.brand }} {{ car.model }}!</p>
         <form action="/car/{{ car.id }}" method="POST" id="rate_form">
             <label for="rate_name">Name</label>
-            <input type="text" name="name" id="rate_name" placeholder="Your name" class="form-input">
+            <input type="text" name="name" id="rate_name" placeholder="Your name" class="form-input" required />
             <input type="hidden" id="rate_car_id" name="car_id" value="{{ car.id }}" />
             <div class="row">
                 <div class="col8">
