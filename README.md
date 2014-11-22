@@ -28,11 +28,20 @@ From within the virtualenv:
 
 ## Technology
 
+### HTML
+
+The HTML is located in the templates folder.
+
+We use a template engine called Jinja2. This allows us to create a base template (base.html), and create additional template files that override blocks in the base template.
+Our backend then renders each template, replacing variables with real data at runtime, and returns the complete html file. Jinja2 allows us to have for loops, variables and if else statements in our templates.
+
 ### CSS/LESS
 
 We do not use any pre-made CSS framework in our project, like Bootstrap or similar frameworks. We do, however take advantage of the LESS syntax for CSS, which allows us to write CSS in a much more efficiant matter.
 LESS is really just regular CSS, but with the ability to assign variables, use a few simple functions like "lighten" or "darken" to lighten or darken color hex values, and also adds the ability to separate your style sheets into seperate files.
 LESS also supports nesting of statements, which means you can create style hierarchies without having to repeat yourself that much.
+
+The LESS files are located in static/less/, and the compiled CSS file is located in static/css/
 
 ### XML
 
@@ -50,6 +59,10 @@ We have used JavaScript in the following locations of our application:
 - Contact Form: Input validation
 - Rent Now Form (Car details pages): Input validation
 - Rate Car Form (Car details pages): Asynchronous form posting and dynamic DOM updates on POST success.
+
+For more information about the jQuery library, visit http://jquery.com
+
+The JavaScript is located in static/js/
 
 ### Backend (Flask)
 
