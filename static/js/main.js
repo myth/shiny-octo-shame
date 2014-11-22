@@ -118,7 +118,7 @@ var Cars = (function ($) {
                 var contactForm = $('#contact_form')
                 var fields = contactForm.serializeArray()
                 for (var x = 0; x < fields.length; x++) {
-                    if (!fields[x]['value']) {
+                    if (!fields[x]['value'] && !fields[x]['name'] == 'contact_subject') {
                         alert('Missing input in fields')
                         return
                     }
