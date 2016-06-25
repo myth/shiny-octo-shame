@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 
+echo "Initializing database"
 cd /srv/app
+rm -f db.db
 python3 initmodels.py
-
-rm /tmp/project-master.pid
 
 echo Starting uwsgi.
 exec uwsgi --chdir=/srv/app \
